@@ -201,7 +201,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
                 uint16_t mask = LINK_TIMEOUT ^ LINK_TIMEOUT_ALT;
                 kb_config.rf_link_timeout ^= mask; // XOR swap
-                eeconfig_update_kb_datablock(&kb_config);
+                eeconfig_update_kb_datablock(&kb_config, 0, EECONFIG_KB_DATA_SIZE);
             }
             return false;
 

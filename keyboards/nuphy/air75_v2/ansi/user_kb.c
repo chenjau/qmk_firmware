@@ -391,7 +391,7 @@ void timer_pro(void) {
  * @brief  load eeprom data.
  */
 void load_eeprom_data(void) {
-    eeconfig_read_kb_datablock(&kb_config);
+    eeconfig_read_kb_datablock(&kb_config, 0, EECONFIG_KB_DATA_SIZE);
     if (kb_config.init_flag != 0xA5) {
         kb_config_reset();
     }
@@ -412,7 +412,7 @@ void kb_config_reset(void) {
     kb_config.side_colour     = 0;
     kb_config.sleep_mode      = SLEEP_MODE_DEEP;
     kb_config.rf_link_timeout = LINK_TIMEOUT_ALT;
-    eeconfig_update_kb_datablock(&kb_config);
+    eeconfig_update_kb_datablock(&kb_config, 0, EECONFIG_KB_DATA_SIZE);
 }
 
 /**
@@ -534,7 +534,7 @@ void toggle_sleep_mode(void) {
         kb_config.sleep_mode = SLEEP_MODE_DEEP;
     }
     f_sleep_show = 1;
-    eeconfig_update_kb_datablock(&kb_config);
+    eeconfig_update_kb_datablock(&kb_config, 0, EECONFIG_KB_DATA_SIZE);
 }
 
 void link_mode_set(void) {

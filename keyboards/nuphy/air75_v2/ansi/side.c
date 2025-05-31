@@ -144,7 +144,7 @@ void side_light_control(uint8_t dir) {
         }
         kb_config.side_light--;
     }
-    eeconfig_update_kb_datablock(&kb_config);
+    eeconfig_update_kb_datablock(&kb_config, 0, EECONFIG_KB_DATA_SIZE);
 }
 
 /**
@@ -164,7 +164,7 @@ void side_speed_control(uint8_t dir) {
         }
         kb_config.side_speed++;
     }
-    eeconfig_update_kb_datablock(&kb_config);
+    eeconfig_update_kb_datablock(&kb_config, 0, EECONFIG_KB_DATA_SIZE);
 }
 
 /**
@@ -202,7 +202,7 @@ void side_colour_control(uint8_t dir) {
             }
         }
     }
-    eeconfig_update_kb_datablock(&kb_config);
+    eeconfig_update_kb_datablock(&kb_config, 0, EECONFIG_KB_DATA_SIZE);
 }
 
 /**
@@ -224,7 +224,7 @@ void side_mode_control(uint8_t dir) {
         }
     }
     side_play_point = 0;
-    eeconfig_update_kb_datablock(&kb_config);
+    eeconfig_update_kb_datablock(&kb_config, 0, EECONFIG_KB_DATA_SIZE);
 }
 
 /**

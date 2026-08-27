@@ -20,6 +20,17 @@ qmk compile -kb nuphy/air75_v2/ansi -km yu
 - 6: shared connection, lighting, and maintenance controls
 - 7: reserved
 
+The bottom row follows the physical keycaps:
+
+- macOS: `Control | Option | Super Fn | Space | Globe | Command | Common`
+- Windows: `GUI | Alt | Super Fn | Space | Right Control | Right GUI | Common`
+
+The macOS Globe key is a dedicated held key, not a tap action. It sends the
+Apple keyboard-layout-select consumer usage from physical press through
+physical release, allowing native combinations such as Globe-C, Globe-H,
+Globe-N, and Globe-Q. The shared USB endpoint keeps Globe and ordinary keyboard
+reports associated for combinations in wired mode.
+
 Layer 1's `/?` key sends the built-in Layer 6 help text. VIA macro slots M0,
 M1, and M2 keep their existing key assignments but are empty by default.
 

@@ -23,6 +23,7 @@ enum user_keycodes {
     LAYOUT_HELP = QK_USER_0,
     CAPS_GUI_ESC,
     CAPS_CTL_ESC,
+    MAC_GLOBE,
 };
 
 enum caps_dual_role_state {
@@ -45,6 +46,7 @@ static enum esc_pulse_state      esc_pulse_state      = ESC_PULSE_IDLE;
 static uint8_t                   caps_modifier        = KC_NO;
 static uint8_t                   queued_esc_taps      = 0;
 static uint16_t                  esc_pulse_timer      = 0;
+static bool                      mac_globe_down       = false;
 
 static bool is_caps_dual_role_key(uint16_t keycode) {
     return keycode == CAPS_GUI_ESC || keycode == CAPS_CTL_ESC;
@@ -140,6 +142,20 @@ static void clear_caps_dual_role(void) {
     cancel_esc_pulses();
 }
 
+static void set_mac_globe(bool pressed) {
+    if (mac_globe_down == pressed) {
+        return;
+    }
+
+    mac_globe_down = pressed;
+    host_consumer_send(pressed ? AC_NEXT_KEYBOARD_LAYOUT_SELECT : 0);
+}
+
+static void clear_user_key_state(void) {
+    clear_caps_dual_role();
+    set_mac_globe(false);
+}
+
 // VIA's legacy names for the JIS yen and ro keys.
 #define KC_JYEN KC_INT3
 #define KC_RO   KC_INT1
@@ -163,19 +179,19 @@ static void clear_caps_dual_role(void) {
     "F1-F4 = Hyper F1-F4"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [L_MAC] = LAYOUT_75_ansi(LT(L_COMMON, KC_ESC), KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, LSG(KC_4), KC_INS, KC_DEL, KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_EQL, KC_BSPC, KC_PGUP, KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, KC_RBRC, KC_BSLS, KC_PGDN, CAPS_GUI_ESC, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, KC_ENT, KC_HOME, KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, KC_UP, KC_END, KC_LCTL, KC_LALT, MO(L_MAC_FN), KC_SPC, KC_RGUI, MO(L_COMMON), KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT),
+    [L_MAC] = LAYOUT_75_ansi(LT(L_COMMON, KC_ESC), KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, LSG(KC_4), KC_INS, KC_DEL, KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_EQL, KC_BSPC, KC_PGUP, KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, KC_RBRC, KC_BSLS, KC_PGDN, CAPS_GUI_ESC, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, KC_ENT, KC_HOME, KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, KC_UP, KC_END, KC_LCTL, KC_LALT, MO(L_MAC_FN), KC_SPC, MAC_GLOBE, KC_RGUI, MO(L_COMMON), KC_LEFT, KC_DOWN, KC_RGHT),
 
-    [L_MAC_FN] = LAYOUT_75_ansi(_______, KC_BRID, KC_BRIU, KC_MCTL, G(KC_SPC), MAC_VOICE, MAC_DND, KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE, KC_VOLD, KC_VOLU, LSG(KC_3), QK_MACRO_0, QK_MACRO_1, HYPR(KC_GRV), HYPR(KC_1), HYPR(KC_2), HYPR(KC_3), HYPR(KC_4), HYPR(KC_5), HYPR(KC_6), HYPR(KC_7), HYPR(KC_8), HYPR(KC_9), HYPR(KC_0), HYPR(KC_MINS), HYPR(KC_EQL), _______, KC_MS_WH_UP, _______, KC_F13, KC_UP, KC_F14, KC_F15, KC_F16, _______, _______, _______, _______, _______, _______, _______, QK_MACRO_2, KC_MS_WH_DOWN, S(KC_GRV), KC_LEFT, KC_DOWN, KC_RGHT, KC_F17, KC_F18, _______, KC_PGUP, KC_HOME, KC_INS, _______, _______, _______, _______, _______, KC_F19, KC_F20, KC_JYEN, KC_RO, KC_NUBS, _______, KC_PGDN, KC_END, KC_DEL, LAYOUT_HELP, KC_MS_BTN1, KC_MS_UP, KC_MS_BTN2, _______, _______, _______, _______, _______, MO(L_MAC_FN), _______, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT),
+    [L_MAC_FN] = LAYOUT_75_ansi(_______, KC_BRID, KC_BRIU, KC_MCTL, G(KC_SPC), MAC_VOICE, MAC_DND, KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE, KC_VOLD, KC_VOLU, LSG(KC_3), QK_MACRO_0, QK_MACRO_1, HYPR(KC_GRV), HYPR(KC_1), HYPR(KC_2), HYPR(KC_3), HYPR(KC_4), HYPR(KC_5), HYPR(KC_6), HYPR(KC_7), HYPR(KC_8), HYPR(KC_9), HYPR(KC_0), HYPR(KC_MINS), HYPR(KC_EQL), _______, KC_MS_WH_UP, _______, KC_F13, KC_UP, KC_F14, KC_F15, KC_F16, _______, _______, _______, _______, _______, _______, _______, QK_MACRO_2, KC_MS_WH_DOWN, S(KC_GRV), KC_LEFT, KC_DOWN, KC_RGHT, KC_F17, KC_F18, _______, KC_PGUP, KC_HOME, KC_INS, _______, _______, _______, _______, _______, KC_F19, KC_F20, KC_JYEN, KC_RO, KC_NUBS, _______, KC_PGDN, KC_END, KC_DEL, LAYOUT_HELP, KC_MS_BTN1, KC_MS_UP, KC_MS_BTN2, _______, _______, _______, _______, _______, _______, MO(L_MAC_FN), KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT),
 
-    [L_WIN] = LAYOUT_75_ansi(LT(L_COMMON, KC_ESC), KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_PSCR, KC_INS, KC_DEL, KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_EQL, KC_BSPC, KC_PGUP, KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, KC_RBRC, KC_BSLS, KC_PGDN, CAPS_CTL_ESC, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, KC_ENT, KC_HOME, KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, KC_UP, KC_END, KC_LGUI, KC_LALT, MO(L_WIN_FN), KC_SPC, KC_RGUI, MO(L_COMMON), KC_RCTL, KC_LEFT, KC_DOWN, KC_RGHT),
+    [L_WIN] = LAYOUT_75_ansi(LT(L_COMMON, KC_ESC), KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_PSCR, KC_INS, KC_DEL, KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS, KC_EQL, KC_BSPC, KC_PGUP, KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_LBRC, KC_RBRC, KC_BSLS, KC_PGDN, CAPS_CTL_ESC, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, KC_ENT, KC_HOME, KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, KC_UP, KC_END, KC_LGUI, KC_LALT, MO(L_WIN_FN), KC_SPC, KC_RCTL, KC_RGUI, MO(L_COMMON), KC_LEFT, KC_DOWN, KC_RGHT),
 
-    [L_WIN_FN] = LAYOUT_75_ansi(_______, KC_BRID, KC_BRIU, G(KC_TAB), G(KC_S), G(KC_H), G(KC_N), KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE, KC_VOLD, KC_VOLU, _______, QK_MACRO_0, QK_MACRO_1, HYPR(KC_GRV), HYPR(KC_1), HYPR(KC_2), HYPR(KC_3), HYPR(KC_4), HYPR(KC_5), HYPR(KC_6), HYPR(KC_7), HYPR(KC_8), HYPR(KC_9), HYPR(KC_0), HYPR(KC_MINS), HYPR(KC_EQL), _______, KC_MS_WH_UP, _______, KC_F13, KC_UP, KC_F14, KC_F15, KC_F16, _______, _______, _______, _______, _______, _______, _______, QK_MACRO_2, KC_MS_WH_DOWN, S(KC_GRV), KC_LEFT, KC_DOWN, KC_RGHT, KC_F17, KC_F18, _______, KC_PGUP, KC_HOME, KC_INS, _______, _______, _______, _______, _______, KC_F19, KC_F20, KC_JYEN, KC_RO, KC_NUBS, _______, KC_PGDN, KC_END, KC_DEL, _______, KC_MS_BTN1, KC_MS_UP, KC_MS_BTN2, _______, _______, _______, _______, _______, MO(L_WIN_FN), _______, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT),
+    [L_WIN_FN] = LAYOUT_75_ansi(_______, KC_BRID, KC_BRIU, G(KC_TAB), G(KC_S), G(KC_H), G(KC_N), KC_MPRV, KC_MPLY, KC_MNXT, KC_MUTE, KC_VOLD, KC_VOLU, _______, QK_MACRO_0, QK_MACRO_1, HYPR(KC_GRV), HYPR(KC_1), HYPR(KC_2), HYPR(KC_3), HYPR(KC_4), HYPR(KC_5), HYPR(KC_6), HYPR(KC_7), HYPR(KC_8), HYPR(KC_9), HYPR(KC_0), HYPR(KC_MINS), HYPR(KC_EQL), _______, KC_MS_WH_UP, _______, KC_F13, KC_UP, KC_F14, KC_F15, KC_F16, _______, _______, _______, _______, _______, _______, _______, QK_MACRO_2, KC_MS_WH_DOWN, S(KC_GRV), KC_LEFT, KC_DOWN, KC_RGHT, KC_F17, KC_F18, _______, KC_PGUP, KC_HOME, KC_INS, _______, _______, _______, _______, _______, KC_F19, KC_F20, KC_JYEN, KC_RO, KC_NUBS, _______, KC_PGDN, KC_END, KC_DEL, _______, KC_MS_BTN1, KC_MS_UP, KC_MS_BTN2, _______, _______, _______, _______, _______, _______, MO(L_WIN_FN), KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT),
 
     [L_RESERVED_4] = LAYOUT_75_ansi(_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, MO(L_RESERVED_4), _______, _______, _______, _______),
 
     [L_RESERVED_5] = LAYOUT_75_ansi(_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, MO(L_RESERVED_5), _______, _______, _______, _______),
 
-    [L_COMMON] = LAYOUT_75_ansi(_______, HYPR(KC_F1), HYPR(KC_F2), HYPR(KC_F3), HYPR(KC_F4), _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, LNK_BLE1, LNK_BLE2, LNK_BLE3, LNK_RF, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, SIDE_MOD, SIDE_SPI, SIDE_VAI, _______, RGB_MOD, RGB_SPI, RGB_VAI, RGB_HUI, RGB_SAI, _______, DEV_RESET, SLEEP_MODE, BAT_SHOW, _______, KC_CAPS, SIDE_HUI, SIDE_SPD, SIDE_VAD, _______, RGB_RMOD, RGB_SPD, RGB_VAD, RGB_HUD, RGB_SAD, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, MO(L_COMMON), _______, _______, _______, _______),
+    [L_COMMON] = LAYOUT_75_ansi(_______, HYPR(KC_F1), HYPR(KC_F2), HYPR(KC_F3), HYPR(KC_F4), _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, LNK_BLE1, LNK_BLE2, LNK_BLE3, LNK_RF, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, SIDE_MOD, SIDE_SPI, SIDE_VAI, _______, RGB_MOD, RGB_SPI, RGB_VAI, RGB_HUI, RGB_SAI, _______, DEV_RESET, SLEEP_MODE, BAT_SHOW, _______, KC_CAPS, SIDE_HUI, SIDE_SPD, SIDE_VAD, _______, RGB_RMOD, RGB_SPD, RGB_VAD, RGB_HUD, RGB_SAD, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, MO(L_COMMON), _______, _______, _______),
 
     [L_RESERVED_7] = LAYOUT_75_ansi(_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, MO(L_RESERVED_7), _______, _______, _______, _______),
 };
@@ -187,6 +203,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     if (record->event.pressed && caps_dual_role_state != CAPS_DUAL_ROLE_IDLE) {
         activate_caps_modifier();
+    }
+
+    if (keycode == MAC_GLOBE) {
+        set_mac_globe(record->event.pressed);
+        return false;
     }
 
     if (keycode == LAYOUT_HELP) {
@@ -204,21 +225,21 @@ void housekeeping_task_user(void) {
 }
 
 void suspend_power_down_user(void) {
-    clear_caps_dual_role();
+    clear_user_key_state();
 }
 
 void suspend_wakeup_init_user(void) {
-    clear_caps_dual_role();
+    clear_user_key_state();
 }
 
 bool shutdown_user(bool jump_to_bootloader) {
     (void)jump_to_bootloader;
-    clear_caps_dual_role();
+    clear_user_key_state();
     return true;
 }
 
 layer_state_t default_layer_state_set_user(layer_state_t state) {
-    clear_caps_dual_role();
+    clear_user_key_state();
     return state;
 }
 

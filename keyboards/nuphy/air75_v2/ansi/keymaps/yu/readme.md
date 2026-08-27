@@ -23,6 +23,21 @@ qmk compile -kb nuphy/air75_v2/ansi -km yu
 Layer 1's `/?` key sends the built-in Layer 6 help text. VIA macro slots M0,
 M1, and M2 keep their existing key assignments but are empty by default.
 
+## Caps: Esc or modifier
+
+The Caps-position key uses a dedicated state machine instead of QMK Mod-Tap:
+
+- Press and release it without pressing another key to send Escape, regardless
+  of how long it was held.
+- Press another key while holding it to use left Command on macOS or left
+  Control on Windows. The modifier is registered before the other key.
+- Escape taps use a non-blocking 24 ms key-down pulse and an 8 ms gap between
+  queued taps, so rapid repeated taps remain distinct and RF housekeeping can
+  continue running.
+
+An external mouse click is not visible to the keyboard state machine, so use a
+regular Command or Control key for modifier-plus-mouse gestures.
+
 When changing the compiled layout, bump `YU_LAYOUT_REVISION` in `config.h`.
 This forces the new defaults into VIA's dynamic-keymap EEPROM even when two
 firmware builds are flashed on the same day.

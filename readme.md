@@ -46,9 +46,9 @@ The resulting firmware is `nuphy_air75_v2_ansi_yu.bin`.
 ## Layers
 
 - **0:** macOS base
-- **1:** macOS function layer
+- **1:** macOS custom layer
 - **2:** Windows base
-- **3:** Windows function layer
+- **3:** Windows custom layer
 - **4-5:** reserved
 - **6:** shared connection, lighting, and maintenance controls
 - **7:** reserved
@@ -60,17 +60,17 @@ layers are intentionally omitted.
 
 ![Layer 0 macOS layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-0-macos.svg)
 
-### Layer 1: macOS Fn
+### Layer 1: macOS custom
 
-![Layer 1 macOS Fn layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-1-macos-fn.svg)
+![Layer 1 macOS custom layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-1-macos-custom.svg)
 
 ### Layer 2: Windows
 
 ![Layer 2 Windows layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-2-windows.svg)
 
-### Layer 3: Windows Fn
+### Layer 3: Windows custom
 
-![Layer 3 Windows Fn layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-3-windows-fn.svg)
+![Layer 3 Windows custom layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-3-windows-custom.svg)
 
 ### Layer 6: Common
 

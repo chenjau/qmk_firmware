@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="780" viewBox="0 0 1600 780" role="img" aria-labelledby="title desc">
-  <title id="title">Layer 3 · Windows Fn</title>
-  <desc id="desc">Hold Super Fn on Layer 2 · faded keys inherit the Windows base layer</desc>
+  <title id="title">Layer 3 · Windows custom</title>
+  <desc id="desc">Hold the Layer 3 key on the Windows base · faded keys inherit Layer 2</desc>
   <style>
     .canvas { fill: #f8fafc; }
     .board { fill: #cbd5e1; stroke: #64748b; stroke-width: 2; }
@@ -25,8 +25,8 @@
     .legend-swatch { stroke-width: 2; }
   </style>
   <rect class="canvas" width="1600" height="780" rx="18" />
-  <text class="doc-title" x="32" y="44">Layer 3 · Windows Fn</text>
-  <text class="doc-subtitle" x="32" y="72">Hold Super Fn on Layer 2 · faded keys inherit the Windows base layer</text>
+  <text class="doc-title" x="32" y="44">Layer 3 · Windows custom</text>
+  <text class="doc-subtitle" x="32" y="72">Hold the Layer 3 key on the Windows base · faded keys inherit Layer 2</text>
   <text class="source-note" x="1568" y="44">Generated from keymap.c + keyboard.json · do not edit</text>
   <rect class="board" x="24" y="104" width="1552" height="592" rx="18" />
   <g class="key key-inherited">
@@ -464,7 +464,7 @@
 <g class="key key-inherited">
 <title>KC_TRNS</title>
 <rect x="275.0" y="595.0" width="114.0" height="90.0" rx="9" />
-<text class="key-primary" x="332.0" y="636.0" style="font-size:17.0px">Windows Fn</text>
+<text class="key-primary" x="332.0" y="636.0" style="font-size:17.0px">Layer 3</text>
 <text class="key-secondary" x="332.0" y="657.0" style="font-size:12.0px">inherited</text>
 </g>
 <g class="key key-inherited">
@@ -486,9 +486,9 @@
 <text class="key-secondary" x="1136.0" y="657.0" style="font-size:12.0px">inherited</text>
 </g>
 <g class="key key-layer">
-<title>MO(L_WIN_FN)</title>
+<title>MO(L_WIN_CUSTOM)</title>
 <rect x="1187.0" y="595.0" width="90.0" height="90.0" rx="9" />
-<text class="key-primary" x="1232.0" y="636.0" style="font-size:13.2px">Windows Fn</text>
+<text class="key-primary" x="1232.0" y="636.0" style="font-size:17.0px">Layer 3</text>
 <text class="key-secondary" x="1232.0" y="657.0" style="font-size:12.0px">hold</text>
 </g>
 <g class="key key-action">

@@ -13,9 +13,9 @@ qmk compile -kb nuphy/air75_v2/ansi -km yu
 ## Layers
 
 - 0: macOS base
-- 1: macOS function layer
+- 1: macOS custom layer
 - 2: Windows base
-- 3: Windows function layer
+- 3: Windows custom layer
 - 4-5: reserved
 - 6: shared connection, lighting, and maintenance controls
 - 7: reserved
@@ -30,17 +30,17 @@ and 7 are reserved and are therefore omitted.
 
 ![Layer 0 macOS layout](docs/layouts/layer-0-macos.svg)
 
-### Layer 1: macOS Fn
+### Layer 1: macOS custom
 
-![Layer 1 macOS Fn layout](docs/layouts/layer-1-macos-fn.svg)
+![Layer 1 macOS custom layout](docs/layouts/layer-1-macos-custom.svg)
 
 ### Layer 2: Windows
 
 ![Layer 2 Windows layout](docs/layouts/layer-2-windows.svg)
 
-### Layer 3: Windows Fn
+### Layer 3: Windows custom
 
-![Layer 3 Windows Fn layout](docs/layouts/layer-3-windows-fn.svg)
+![Layer 3 Windows custom layout](docs/layouts/layer-3-windows-custom.svg)
 
 ### Layer 6: Common
 
@@ -61,10 +61,10 @@ still match the source without changing files, run:
 python3 keyboards/nuphy/air75_v2/ansi/keymaps/yu/tools/render_layouts.py --check
 ```
 
-The bottom row follows the physical keycaps:
+The bottom-row bindings are:
 
-- macOS: `Control | Option | Super Fn | Space | Globe | Command | Common`
-- Windows: `GUI | Alt | Super Fn | Space | Right Control | Right GUI | Common`
+- macOS: `Control | Option | Layer 1 | Space | Globe | Command | Layer 6`
+- Windows: `GUI | Alt | Layer 3 | Space | Right Control | Right GUI | Layer 6`
 
 The macOS Globe key is a dedicated held key, not a tap action. It sends the
 Apple keyboard-layout-select consumer usage from physical press through
@@ -72,8 +72,9 @@ physical release, allowing native combinations such as Globe-C, Globe-H,
 Globe-N, and Globe-Q. The shared USB endpoint keeps Globe and ordinary keyboard
 reports associated for combinations in wired mode.
 
-Layer 1's `/?` key sends the built-in Layer 6 help text. VIA macro slots M0,
-M1, and M2 keep their existing key assignments but are empty by default.
+Layer 6's `/?` key sends the built-in help text in both macOS and Windows
+modes. VIA macro slots M0, M1, and M2 keep their existing key assignments but
+are empty by default.
 
 ## Caps: Esc or modifier
 

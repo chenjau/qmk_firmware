@@ -60,9 +60,9 @@ LAYERS = (
     ),
     LayerDoc(
         1,
-        "layer-1-macos-fn",
-        "Layer 1 · macOS Fn",
-        "Hold Super Fn on Layer 0 · faded keys inherit the macOS base layer",
+        "layer-1-macos-custom",
+        "Layer 1 · macOS custom",
+        "Hold the Layer 1 key on the macOS base · faded keys inherit Layer 0",
         inherit_from=0,
     ),
     LayerDoc(
@@ -73,16 +73,16 @@ LAYERS = (
     ),
     LayerDoc(
         3,
-        "layer-3-windows-fn",
-        "Layer 3 · Windows Fn",
-        "Hold Super Fn on Layer 2 · faded keys inherit the Windows base layer",
+        "layer-3-windows-custom",
+        "Layer 3 · Windows custom",
+        "Hold the Layer 3 key on the Windows base · faded keys inherit Layer 2",
         inherit_from=2,
     ),
     LayerDoc(
         6,
         "layer-6-common",
         "Layer 6 · Common",
-        "Hold top-left Esc or the Common/Cat key · connection, lighting, and maintenance",
+        "Hold top-left Esc or the Layer 6/Cat key · connection, lighting, and maintenance",
     ),
 )
 
@@ -256,13 +256,13 @@ def label_for(code: str, layer_index: int) -> KeyLabel:
         return KeyLabel("Hyper", nested.primary, "shortcut")
     if match := re.fullmatch(r"MO\((.+)\)", code):
         layer = {
-            "L_MAC_FN": "macOS Fn",
-            "L_WIN_FN": "Windows Fn",
-            "L_COMMON": "Common",
+            "L_MAC_CUSTOM": "Layer 1",
+            "L_WIN_CUSTOM": "Layer 3",
+            "L_COMMON": "Layer 6",
         }.get(match.group(1), match.group(1))
         return KeyLabel(layer, "hold", "layer")
     if match := re.fullmatch(r"LT\((.+),\s*(.+)\)", code):
-        layer = {"L_COMMON": "Common"}.get(match.group(1), match.group(1))
+        layer = {"L_COMMON": "Layer 6"}.get(match.group(1), match.group(1))
         tap = label_for(match.group(2), layer_index)
         return KeyLabel(tap.primary, f"hold {layer}", "layer")
 

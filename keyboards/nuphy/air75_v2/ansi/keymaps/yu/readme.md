@@ -20,6 +20,47 @@ qmk compile -kb nuphy/air75_v2/ansi -km yu
 - 6: shared connection, lighting, and maintenance controls
 - 7: reserved
 
+## Layout diagrams
+
+These diagrams are generated from `keymap.c` and the physical geometry in
+`keyboard.json`. Faded, dashed keys pass through to a lower layer. Layers 4, 5,
+and 7 are reserved and are therefore omitted.
+
+### Layer 0: macOS
+
+![Layer 0 macOS layout](docs/layouts/layer-0-macos.svg)
+
+### Layer 1: macOS Fn
+
+![Layer 1 macOS Fn layout](docs/layouts/layer-1-macos-fn.svg)
+
+### Layer 2: Windows
+
+![Layer 2 Windows layout](docs/layouts/layer-2-windows.svg)
+
+### Layer 3: Windows Fn
+
+![Layer 3 Windows Fn layout](docs/layouts/layer-3-windows-fn.svg)
+
+### Layer 6: Common
+
+![Layer 6 common layout](docs/layouts/layer-6-common.svg)
+
+Regenerate the diagrams from the repository root after changing the compiled
+layout:
+
+```sh
+python3 keyboards/nuphy/air75_v2/ansi/keymaps/yu/tools/render_layouts.py --png
+```
+
+The SVG files are the primary documentation. `--png` also writes convenient
+raster copies when `rsvg-convert` is installed. To verify that committed SVGs
+still match the source without changing files, run:
+
+```sh
+python3 keyboards/nuphy/air75_v2/ansi/keymaps/yu/tools/render_layouts.py --check
+```
+
 The bottom row follows the physical keycaps:
 
 - macOS: `Control | Option | Super Fn | Space | Globe | Command | Common`

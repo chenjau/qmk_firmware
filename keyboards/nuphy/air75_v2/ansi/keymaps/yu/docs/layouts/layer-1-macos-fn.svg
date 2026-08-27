@@ -1,0 +1,527 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="780" viewBox="0 0 1600 780" role="img" aria-labelledby="title desc">
+  <title id="title">Layer 1 · macOS Fn</title>
+  <desc id="desc">Hold Super Fn on Layer 0 · faded keys inherit the macOS base layer</desc>
+  <style>
+    .canvas { fill: #f8fafc; }
+    .board { fill: #cbd5e1; stroke: #64748b; stroke-width: 2; }
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
+    .doc-title { font-size: 29px; font-weight: 600; }
+    .doc-subtitle { font-size: 15px; fill: #475569; }
+    .source-note { font-size: 13px; fill: #64748b; text-anchor: end; }
+    .key rect { stroke-width: 2; }
+    .key-primary, .key-secondary { text-anchor: middle; dominant-baseline: auto; }
+    .key-primary { font-weight: 600; }
+    .key-secondary { fill: #475569; }
+    .key-normal rect { fill: #ffffff; stroke: #94a3b8; }
+    .key-inherited rect, .legend-swatch.key-inherited { fill: #f1f5f9; stroke: #94a3b8; stroke-dasharray: 5 4; }
+    .key-inherited text { fill: #64748b; font-weight: 400; }
+    .key-modifier rect, .legend-swatch.key-modifier { fill: #dbeafe; stroke: #2563eb; }
+    .key-layer rect, .legend-swatch.key-layer { fill: #fef3c7; stroke: #d97706; }
+    .key-shortcut rect, .legend-swatch.key-shortcut { fill: #ede9fe; stroke: #7c3aed; }
+    .key-action rect, .legend-swatch.key-action { fill: #e0f2fe; stroke: #0284c7; }
+    .key-hardware rect, .legend-swatch.key-hardware { fill: #ccfbf1; stroke: #0f766e; }
+    .key-system rect, .legend-swatch.key-system { fill: #fee2e2; stroke: #dc2626; }
+    .legend text { font-size: 13px; fill: #334155; }
+    .legend-swatch { stroke-width: 2; }
+  </style>
+  <rect class="canvas" width="1600" height="780" rx="18" />
+  <text class="doc-title" x="32" y="44">Layer 1 · macOS Fn</text>
+  <text class="doc-subtitle" x="32" y="72">Hold Super Fn on Layer 0 · faded keys inherit the macOS base layer</text>
+  <text class="source-note" x="1568" y="44">Generated from keymap.c + keyboard.json · do not edit</text>
+  <rect class="board" x="24" y="104" width="1552" height="592" rx="18" />
+  <g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="35.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="80.0" y="156.0" style="font-size:17.0px">Esc</text>
+<text class="key-secondary" x="80.0" y="177.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-action">
+<title>KC_BRID</title>
+<rect x="131.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="176.0" y="156.0" style="font-size:13.2px">Brightness</text>
+<text class="key-secondary" x="176.0" y="177.0" style="font-size:12.0px">−</text>
+</g>
+<g class="key key-action">
+<title>KC_BRIU</title>
+<rect x="227.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="272.0" y="156.0" style="font-size:13.2px">Brightness</text>
+<text class="key-secondary" x="272.0" y="177.0" style="font-size:12.0px">+</text>
+</g>
+<g class="key key-action">
+<title>KC_MCTL</title>
+<rect x="323.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="368.0" y="156.0" style="font-size:17.0px">Mission</text>
+<text class="key-secondary" x="368.0" y="177.0" style="font-size:12.0px">Control</text>
+</g>
+<g class="key key-shortcut">
+<title>G(KC_SPC)</title>
+<rect x="419.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="464.0" y="156.0" style="font-size:14.7px">Spotlight</text>
+<text class="key-secondary" x="464.0" y="177.0" style="font-size:12.0px">⌘ Space</text>
+</g>
+<g class="key key-action">
+<title>MAC_VOICE</title>
+<rect x="515.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="560.0" y="165.0" style="font-size:14.7px">Dictation</text>
+</g>
+<g class="key key-action">
+<title>MAC_DND</title>
+<rect x="611.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="656.0" y="156.0" style="font-size:17.0px">Do Not</text>
+<text class="key-secondary" x="656.0" y="177.0" style="font-size:12.0px">Disturb</text>
+</g>
+<g class="key key-action">
+<title>KC_MPRV</title>
+<rect x="707.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="752.0" y="165.6" style="font-size:16.5px">Previous</text>
+</g>
+<g class="key key-action">
+<title>KC_MPLY</title>
+<rect x="803.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="848.0" y="163.7" style="font-size:11.0px">Play / Pause</text>
+</g>
+<g class="key key-action">
+<title>KC_MNXT</title>
+<rect x="899.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="944.0" y="165.8" style="font-size:17.0px">Next</text>
+</g>
+<g class="key key-action">
+<title>KC_MUTE</title>
+<rect x="995.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1040.0" y="165.8" style="font-size:17.0px">Mute</text>
+</g>
+<g class="key key-action">
+<title>KC_VOLD</title>
+<rect x="1091.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1136.0" y="156.0" style="font-size:17.0px">Volume</text>
+<text class="key-secondary" x="1136.0" y="177.0" style="font-size:12.0px">−</text>
+</g>
+<g class="key key-action">
+<title>KC_VOLU</title>
+<rect x="1187.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1232.0" y="156.0" style="font-size:17.0px">Volume</text>
+<text class="key-secondary" x="1232.0" y="177.0" style="font-size:12.0px">+</text>
+</g>
+<g class="key key-shortcut">
+<title>LSG(KC_3)</title>
+<rect x="1283.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1328.0" y="156.0" style="font-size:14.7px">Full Shot</text>
+<text class="key-secondary" x="1328.0" y="177.0" style="font-size:12.0px">⇧⌘3</text>
+</g>
+<g class="key key-shortcut">
+<title>QK_MACRO_0</title>
+<rect x="1379.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1424.0" y="156.0" style="font-size:17.0px">M0</text>
+<text class="key-secondary" x="1424.0" y="177.0" style="font-size:12.0px">empty</text>
+</g>
+<g class="key key-shortcut">
+<title>QK_MACRO_1</title>
+<rect x="1475.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1520.0" y="156.0" style="font-size:17.0px">M1</text>
+<text class="key-secondary" x="1520.0" y="177.0" style="font-size:12.0px">empty</text>
+</g>
+<g class="key key-shortcut">
+<title>HYPR(KC_GRV)</title>
+<rect x="35.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="80.0" y="252.0" style="font-size:17.0px">Hyper</text>
+<text class="key-secondary" x="80.0" y="273.0" style="font-size:12.0px">`</text>
+</g>
+<g class="key key-shortcut">
+<title>HYPR(KC_1)</title>
+<rect x="131.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="176.0" y="252.0" style="font-size:17.0px">Hyper</text>
+<text class="key-secondary" x="176.0" y="273.0" style="font-size:12.0px">1</text>
+</g>
+<g class="key key-shortcut">
+<title>HYPR(KC_2)</title>
+<rect x="227.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="272.0" y="252.0" style="font-size:17.0px">Hyper</text>
+<text class="key-secondary" x="272.0" y="273.0" style="font-size:12.0px">2</text>
+</g>
+<g class="key key-shortcut">
+<title>HYPR(KC_3)</title>
+<rect x="323.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="368.0" y="252.0" style="font-size:17.0px">Hyper</text>
+<text class="key-secondary" x="368.0" y="273.0" style="font-size:12.0px">3</text>
+</g>
+<g class="key key-shortcut">
+<title>HYPR(KC_4)</title>
+<rect x="419.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="464.0" y="252.0" style="font-size:17.0px">Hyper</text>
+<text class="key-secondary" x="464.0" y="273.0" style="font-size:12.0px">4</text>
+</g>
+<g class="key key-shortcut">
+<title>HYPR(KC_5)</title>
+<rect x="515.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="560.0" y="252.0" style="font-size:17.0px">Hyper</text>
+<text class="key-secondary" x="560.0" y="273.0" style="font-size:12.0px">5</text>
+</g>
+<g class="key key-shortcut">
+<title>HYPR(KC_6)</title>
+<rect x="611.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="656.0" y="252.0" style="font-size:17.0px">Hyper</text>
+<text class="key-secondary" x="656.0" y="273.0" style="font-size:12.0px">6</text>
+</g>
+<g class="key key-shortcut">
+<title>HYPR(KC_7)</title>
+<rect x="707.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="752.0" y="252.0" style="font-size:17.0px">Hyper</text>
+<text class="key-secondary" x="752.0" y="273.0" style="font-size:12.0px">7</text>
+</g>
+<g class="key key-shortcut">
+<title>HYPR(KC_8)</title>
+<rect x="803.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="848.0" y="252.0" style="font-size:17.0px">Hyper</text>
+<text class="key-secondary" x="848.0" y="273.0" style="font-size:12.0px">8</text>
+</g>
+<g class="key key-shortcut">
+<title>HYPR(KC_9)</title>
+<rect x="899.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="944.0" y="252.0" style="font-size:17.0px">Hyper</text>
+<text class="key-secondary" x="944.0" y="273.0" style="font-size:12.0px">9</text>
+</g>
+<g class="key key-shortcut">
+<title>HYPR(KC_0)</title>
+<rect x="995.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1040.0" y="252.0" style="font-size:17.0px">Hyper</text>
+<text class="key-secondary" x="1040.0" y="273.0" style="font-size:12.0px">0</text>
+</g>
+<g class="key key-shortcut">
+<title>HYPR(KC_MINS)</title>
+<rect x="1091.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1136.0" y="252.0" style="font-size:17.0px">Hyper</text>
+<text class="key-secondary" x="1136.0" y="273.0" style="font-size:12.0px">-</text>
+</g>
+<g class="key key-shortcut">
+<title>HYPR(KC_EQL)</title>
+<rect x="1187.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1232.0" y="252.0" style="font-size:17.0px">Hyper</text>
+<text class="key-secondary" x="1232.0" y="273.0" style="font-size:12.0px">=</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1283.0" y="211.0" width="186.0" height="90.0" rx="9" />
+<text class="key-primary" x="1376.0" y="252.0" style="font-size:17.0px">Backspace</text>
+<text class="key-secondary" x="1376.0" y="273.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-action">
+<title>KC_MS_WH_UP</title>
+<rect x="1475.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1520.0" y="252.0" style="font-size:17.0px">Scroll</text>
+<text class="key-secondary" x="1520.0" y="273.0" style="font-size:12.0px">↑</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="35.0" y="307.0" width="138.0" height="90.0" rx="9" />
+<text class="key-primary" x="104.0" y="348.0" style="font-size:17.0px">Tab</text>
+<text class="key-secondary" x="104.0" y="369.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-normal">
+<title>KC_F13</title>
+<rect x="179.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="224.0" y="357.8" style="font-size:17.0px">F13</text>
+</g>
+<g class="key key-normal">
+<title>KC_UP</title>
+<rect x="275.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="320.0" y="357.8" style="font-size:17.0px">↑</text>
+</g>
+<g class="key key-normal">
+<title>KC_F14</title>
+<rect x="371.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="416.0" y="357.8" style="font-size:17.0px">F14</text>
+</g>
+<g class="key key-normal">
+<title>KC_F15</title>
+<rect x="467.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="512.0" y="357.8" style="font-size:17.0px">F15</text>
+</g>
+<g class="key key-normal">
+<title>KC_F16</title>
+<rect x="563.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="608.0" y="357.8" style="font-size:17.0px">F16</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="659.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="704.0" y="348.0" style="font-size:17.0px">Y</text>
+<text class="key-secondary" x="704.0" y="369.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="755.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="800.0" y="348.0" style="font-size:17.0px">U</text>
+<text class="key-secondary" x="800.0" y="369.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="851.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="896.0" y="348.0" style="font-size:17.0px">I</text>
+<text class="key-secondary" x="896.0" y="369.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="947.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="992.0" y="348.0" style="font-size:17.0px">O</text>
+<text class="key-secondary" x="992.0" y="369.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1043.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1088.0" y="348.0" style="font-size:17.0px">P</text>
+<text class="key-secondary" x="1088.0" y="369.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1139.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1184.0" y="348.0" style="font-size:17.0px">[</text>
+<text class="key-secondary" x="1184.0" y="369.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1235.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1280.0" y="348.0" style="font-size:17.0px">]</text>
+<text class="key-secondary" x="1280.0" y="369.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-shortcut">
+<title>QK_MACRO_2</title>
+<rect x="1331.0" y="307.0" width="138.0" height="90.0" rx="9" />
+<text class="key-primary" x="1400.0" y="348.0" style="font-size:17.0px">M2</text>
+<text class="key-secondary" x="1400.0" y="369.0" style="font-size:12.0px">empty</text>
+</g>
+<g class="key key-action">
+<title>KC_MS_WH_DOWN</title>
+<rect x="1475.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1520.0" y="348.0" style="font-size:17.0px">Scroll</text>
+<text class="key-secondary" x="1520.0" y="369.0" style="font-size:12.0px">↓</text>
+</g>
+<g class="key key-shortcut">
+<title>S(KC_GRV)</title>
+<rect x="35.0" y="403.0" width="162.0" height="90.0" rx="9" />
+<text class="key-primary" x="116.0" y="444.0" style="font-size:17.0px">~</text>
+<text class="key-secondary" x="116.0" y="465.0" style="font-size:12.0px">Shift `</text>
+</g>
+<g class="key key-normal">
+<title>KC_LEFT</title>
+<rect x="203.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="248.0" y="453.8" style="font-size:17.0px">←</text>
+</g>
+<g class="key key-normal">
+<title>KC_DOWN</title>
+<rect x="299.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="344.0" y="453.8" style="font-size:17.0px">↓</text>
+</g>
+<g class="key key-normal">
+<title>KC_RGHT</title>
+<rect x="395.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="440.0" y="453.8" style="font-size:17.0px">→</text>
+</g>
+<g class="key key-normal">
+<title>KC_F17</title>
+<rect x="491.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="536.0" y="453.8" style="font-size:17.0px">F17</text>
+</g>
+<g class="key key-normal">
+<title>KC_F18</title>
+<rect x="587.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="632.0" y="453.8" style="font-size:17.0px">F18</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="683.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="728.0" y="444.0" style="font-size:17.0px">H</text>
+<text class="key-secondary" x="728.0" y="465.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-normal">
+<title>KC_PGUP</title>
+<rect x="779.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="824.0" y="453.8" style="font-size:17.0px">Page Up</text>
+</g>
+<g class="key key-normal">
+<title>KC_HOME</title>
+<rect x="875.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="920.0" y="453.8" style="font-size:17.0px">Home</text>
+</g>
+<g class="key key-normal">
+<title>KC_INS</title>
+<rect x="971.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1016.0" y="453.8" style="font-size:17.0px">Insert</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1067.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1112.0" y="444.0" style="font-size:17.0px">;</text>
+<text class="key-secondary" x="1112.0" y="465.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1163.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1208.0" y="444.0" style="font-size:17.0px">'</text>
+<text class="key-secondary" x="1208.0" y="465.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1259.0" y="403.0" width="210.0" height="90.0" rx="9" />
+<text class="key-primary" x="1364.0" y="444.0" style="font-size:17.0px">Enter</text>
+<text class="key-secondary" x="1364.0" y="465.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1475.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1520.0" y="444.0" style="font-size:17.0px">Home</text>
+<text class="key-secondary" x="1520.0" y="465.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="35.0" y="499.0" width="210.0" height="90.0" rx="9" />
+<text class="key-primary" x="140.0" y="540.0" style="font-size:17.0px">Left Shift</text>
+<text class="key-secondary" x="140.0" y="561.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-normal">
+<title>KC_F19</title>
+<rect x="251.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="296.0" y="549.8" style="font-size:17.0px">F19</text>
+</g>
+<g class="key key-normal">
+<title>KC_F20</title>
+<rect x="347.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="392.0" y="549.8" style="font-size:17.0px">F20</text>
+</g>
+<g class="key key-shortcut">
+<title>KC_INT3</title>
+<rect x="443.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="488.0" y="549.8" style="font-size:17.0px">JIS ¥</text>
+</g>
+<g class="key key-shortcut">
+<title>KC_INT1</title>
+<rect x="539.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="584.0" y="549.8" style="font-size:17.0px">JIS Ro</text>
+</g>
+<g class="key key-shortcut">
+<title>KC_NUBS</title>
+<rect x="635.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="680.0" y="540.0" style="font-size:17.0px">Non-US</text>
+<text class="key-secondary" x="680.0" y="561.0" style="font-size:12.0px">\ |</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="731.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="776.0" y="540.0" style="font-size:17.0px">N</text>
+<text class="key-secondary" x="776.0" y="561.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-normal">
+<title>KC_PGDN</title>
+<rect x="827.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="872.0" y="549.0" style="font-size:14.7px">Page Down</text>
+</g>
+<g class="key key-normal">
+<title>KC_END</title>
+<rect x="923.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="968.0" y="549.8" style="font-size:17.0px">End</text>
+</g>
+<g class="key key-normal">
+<title>KC_DEL</title>
+<rect x="1019.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1064.0" y="549.8" style="font-size:17.0px">Delete</text>
+</g>
+<g class="key key-shortcut">
+<title>LAYOUT_HELP</title>
+<rect x="1115.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1160.0" y="540.0" style="font-size:17.0px">Help</text>
+<text class="key-secondary" x="1160.0" y="561.0" style="font-size:12.0px">Layer 6</text>
+</g>
+<g class="key key-action">
+<title>KC_MS_BTN1</title>
+<rect x="1211.0" y="499.0" width="162.0" height="90.0" rx="9" />
+<text class="key-primary" x="1292.0" y="540.0" style="font-size:17.0px">Mouse</text>
+<text class="key-secondary" x="1292.0" y="561.0" style="font-size:12.0px">Left</text>
+</g>
+<g class="key key-action">
+<title>KC_MS_UP</title>
+<rect x="1379.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1424.0" y="540.0" style="font-size:17.0px">Mouse</text>
+<text class="key-secondary" x="1424.0" y="561.0" style="font-size:12.0px">↑</text>
+</g>
+<g class="key key-action">
+<title>KC_MS_BTN2</title>
+<rect x="1475.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1520.0" y="540.0" style="font-size:17.0px">Mouse</text>
+<text class="key-secondary" x="1520.0" y="561.0" style="font-size:12.0px">Right</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="35.0" y="595.0" width="114.0" height="90.0" rx="9" />
+<text class="key-primary" x="92.0" y="636.0" style="font-size:14.6px">Left Control</text>
+<text class="key-secondary" x="92.0" y="657.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="155.0" y="595.0" width="114.0" height="90.0" rx="9" />
+<text class="key-primary" x="212.0" y="636.0" style="font-size:15.9px">Left Option</text>
+<text class="key-secondary" x="212.0" y="657.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="275.0" y="595.0" width="114.0" height="90.0" rx="9" />
+<text class="key-primary" x="332.0" y="636.0" style="font-size:17.0px">macOS Fn</text>
+<text class="key-secondary" x="332.0" y="657.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="395.0" y="595.0" width="594.0" height="90.0" rx="9" />
+<text class="key-primary" x="692.0" y="636.0" style="font-size:17.0px">Space</text>
+<text class="key-secondary" x="692.0" y="657.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="995.0" y="595.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1040.0" y="636.0" style="font-size:17.0px">Globe</text>
+<text class="key-secondary" x="1040.0" y="657.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1091.0" y="595.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1136.0" y="636.0" style="font-size:11.0px">Right Command</text>
+<text class="key-secondary" x="1136.0" y="657.0" style="font-size:12.0px">inherited</text>
+</g>
+<g class="key key-layer">
+<title>MO(L_MAC_FN)</title>
+<rect x="1187.0" y="595.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1232.0" y="636.0" style="font-size:16.5px">macOS Fn</text>
+<text class="key-secondary" x="1232.0" y="657.0" style="font-size:12.0px">hold</text>
+</g>
+<g class="key key-action">
+<title>KC_MS_LEFT</title>
+<rect x="1283.0" y="595.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1328.0" y="636.0" style="font-size:17.0px">Mouse</text>
+<text class="key-secondary" x="1328.0" y="657.0" style="font-size:12.0px">←</text>
+</g>
+<g class="key key-action">
+<title>KC_MS_DOWN</title>
+<rect x="1379.0" y="595.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1424.0" y="636.0" style="font-size:17.0px">Mouse</text>
+<text class="key-secondary" x="1424.0" y="657.0" style="font-size:12.0px">↓</text>
+</g>
+<g class="key key-action">
+<title>KC_MS_RIGHT</title>
+<rect x="1475.0" y="595.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1520.0" y="636.0" style="font-size:17.0px">Mouse</text>
+<text class="key-secondary" x="1520.0" y="657.0" style="font-size:12.0px">→</text>
+</g>
+  <g class="legend" aria-label="Key category legend">
+<rect class="legend-swatch key-inherited" x="235.0" y="721" width="20" height="20" rx="5" />
+<text x="263.0" y="736">Inherited</text>
+<rect class="legend-swatch key-modifier" x="371.0" y="721" width="20" height="20" rx="5" />
+<text x="399.0" y="736">Modifier / custom</text>
+<rect class="legend-swatch key-layer" x="547.0" y="721" width="20" height="20" rx="5" />
+<text x="575.0" y="736">Layer access</text>
+<rect class="legend-swatch key-shortcut" x="689.0" y="721" width="20" height="20" rx="5" />
+<text x="717.0" y="736">Shortcut / macro</text>
+<rect class="legend-swatch key-action" x="859.0" y="721" width="20" height="20" rx="5" />
+<text x="887.0" y="736">Media / mouse</text>
+<rect class="legend-swatch key-hardware" x="1013.0" y="721" width="20" height="20" rx="5" />
+<text x="1041.0" y="736">Connection / lighting</text>
+<rect class="legend-swatch key-system" x="1223.0" y="721" width="20" height="20" rx="5" />
+<text x="1251.0" y="736">Maintenance</text>
+</g>
+</svg>

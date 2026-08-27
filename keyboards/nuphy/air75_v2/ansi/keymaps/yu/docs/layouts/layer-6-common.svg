@@ -1,0 +1,545 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="780" viewBox="0 0 1600 780" role="img" aria-labelledby="title desc">
+  <title id="title">Layer 6 · Common</title>
+  <desc id="desc">Hold top-left Esc or the Common/Cat key · connection, lighting, and maintenance</desc>
+  <style>
+    .canvas { fill: #f8fafc; }
+    .board { fill: #cbd5e1; stroke: #64748b; stroke-width: 2; }
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
+    .doc-title { font-size: 29px; font-weight: 600; }
+    .doc-subtitle { font-size: 15px; fill: #475569; }
+    .source-note { font-size: 13px; fill: #64748b; text-anchor: end; }
+    .key rect { stroke-width: 2; }
+    .key-primary, .key-secondary { text-anchor: middle; dominant-baseline: auto; }
+    .key-primary { font-weight: 600; }
+    .key-secondary { fill: #475569; }
+    .key-normal rect { fill: #ffffff; stroke: #94a3b8; }
+    .key-inherited rect, .legend-swatch.key-inherited { fill: #f1f5f9; stroke: #94a3b8; stroke-dasharray: 5 4; }
+    .key-inherited text { fill: #64748b; font-weight: 400; }
+    .key-modifier rect, .legend-swatch.key-modifier { fill: #dbeafe; stroke: #2563eb; }
+    .key-layer rect, .legend-swatch.key-layer { fill: #fef3c7; stroke: #d97706; }
+    .key-shortcut rect, .legend-swatch.key-shortcut { fill: #ede9fe; stroke: #7c3aed; }
+    .key-action rect, .legend-swatch.key-action { fill: #e0f2fe; stroke: #0284c7; }
+    .key-hardware rect, .legend-swatch.key-hardware { fill: #ccfbf1; stroke: #0f766e; }
+    .key-system rect, .legend-swatch.key-system { fill: #fee2e2; stroke: #dc2626; }
+    .legend text { font-size: 13px; fill: #334155; }
+    .legend-swatch { stroke-width: 2; }
+  </style>
+  <rect class="canvas" width="1600" height="780" rx="18" />
+  <text class="doc-title" x="32" y="44">Layer 6 · Common</text>
+  <text class="doc-subtitle" x="32" y="72">Hold top-left Esc or the Common/Cat key · connection, lighting, and maintenance</text>
+  <text class="source-note" x="1568" y="44">Generated from keymap.c + keyboard.json · do not edit</text>
+  <rect class="board" x="24" y="104" width="1552" height="592" rx="18" />
+  <g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="35.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="80.0" y="156.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="80.0" y="177.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-shortcut">
+<title>HYPR(KC_F1)</title>
+<rect x="131.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="176.0" y="156.0" style="font-size:17.0px">Hyper</text>
+<text class="key-secondary" x="176.0" y="177.0" style="font-size:12.0px">F1</text>
+</g>
+<g class="key key-shortcut">
+<title>HYPR(KC_F2)</title>
+<rect x="227.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="272.0" y="156.0" style="font-size:17.0px">Hyper</text>
+<text class="key-secondary" x="272.0" y="177.0" style="font-size:12.0px">F2</text>
+</g>
+<g class="key key-shortcut">
+<title>HYPR(KC_F3)</title>
+<rect x="323.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="368.0" y="156.0" style="font-size:17.0px">Hyper</text>
+<text class="key-secondary" x="368.0" y="177.0" style="font-size:12.0px">F3</text>
+</g>
+<g class="key key-shortcut">
+<title>HYPR(KC_F4)</title>
+<rect x="419.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="464.0" y="156.0" style="font-size:17.0px">Hyper</text>
+<text class="key-secondary" x="464.0" y="177.0" style="font-size:12.0px">F4</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="515.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="560.0" y="156.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="560.0" y="177.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="611.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="656.0" y="156.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="656.0" y="177.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="707.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="752.0" y="156.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="752.0" y="177.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="803.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="848.0" y="156.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="848.0" y="177.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="899.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="944.0" y="156.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="944.0" y="177.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="995.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1040.0" y="156.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1040.0" y="177.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1091.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1136.0" y="156.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1136.0" y="177.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1187.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1232.0" y="156.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1232.0" y="177.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1283.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1328.0" y="156.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1328.0" y="177.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1379.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1424.0" y="156.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1424.0" y="177.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1475.0" y="115.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1520.0" y="156.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1520.0" y="177.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="35.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="80.0" y="252.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="80.0" y="273.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-hardware">
+<title>LNK_BLE1</title>
+<rect x="131.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="176.0" y="260.1" style="font-size:12.0px">Bluetooth 1</text>
+</g>
+<g class="key key-hardware">
+<title>LNK_BLE2</title>
+<rect x="227.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="272.0" y="260.1" style="font-size:12.0px">Bluetooth 2</text>
+</g>
+<g class="key key-hardware">
+<title>LNK_BLE3</title>
+<rect x="323.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="368.0" y="260.1" style="font-size:12.0px">Bluetooth 3</text>
+</g>
+<g class="key key-hardware">
+<title>LNK_RF</title>
+<rect x="419.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="464.0" y="261.8" style="font-size:17.0px">2.4 GHz</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="515.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="560.0" y="252.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="560.0" y="273.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="611.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="656.0" y="252.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="656.0" y="273.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="707.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="752.0" y="252.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="752.0" y="273.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="803.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="848.0" y="252.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="848.0" y="273.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="899.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="944.0" y="252.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="944.0" y="273.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="995.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1040.0" y="252.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1040.0" y="273.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1091.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1136.0" y="252.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1136.0" y="273.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1187.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1232.0" y="252.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1232.0" y="273.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1283.0" y="211.0" width="186.0" height="90.0" rx="9" />
+<text class="key-primary" x="1376.0" y="252.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1376.0" y="273.0" style="font-size:12.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1475.0" y="211.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1520.0" y="252.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1520.0" y="273.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="35.0" y="307.0" width="138.0" height="90.0" rx="9" />
+<text class="key-primary" x="104.0" y="348.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="104.0" y="369.0" style="font-size:12.0px">pass through</text>
+</g>
+<g class="key key-hardware">
+<title>SIDE_MOD</title>
+<rect x="179.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="224.0" y="348.0" style="font-size:17.0px">Side</text>
+<text class="key-secondary" x="224.0" y="369.0" style="font-size:12.0px">Mode +</text>
+</g>
+<g class="key key-hardware">
+<title>SIDE_SPI</title>
+<rect x="275.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="320.0" y="348.0" style="font-size:13.2px">Side Speed</text>
+<text class="key-secondary" x="320.0" y="369.0" style="font-size:12.0px">+</text>
+</g>
+<g class="key key-hardware">
+<title>SIDE_VAI</title>
+<rect x="371.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="416.0" y="348.0" style="font-size:12.0px">Side Bright</text>
+<text class="key-secondary" x="416.0" y="369.0" style="font-size:12.0px">+</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="467.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="512.0" y="348.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="512.0" y="369.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-hardware">
+<title>RGB_MOD</title>
+<rect x="563.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="608.0" y="348.0" style="font-size:17.0px">Main</text>
+<text class="key-secondary" x="608.0" y="369.0" style="font-size:12.0px">Mode +</text>
+</g>
+<g class="key key-hardware">
+<title>RGB_SPI</title>
+<rect x="659.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="704.0" y="348.0" style="font-size:13.2px">Main Speed</text>
+<text class="key-secondary" x="704.0" y="369.0" style="font-size:12.0px">+</text>
+</g>
+<g class="key key-hardware">
+<title>RGB_VAI</title>
+<rect x="755.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="800.0" y="348.0" style="font-size:12.0px">Main Bright</text>
+<text class="key-secondary" x="800.0" y="369.0" style="font-size:12.0px">+</text>
+</g>
+<g class="key key-hardware">
+<title>RGB_HUI</title>
+<rect x="851.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="896.0" y="348.0" style="font-size:16.5px">Main Hue</text>
+<text class="key-secondary" x="896.0" y="369.0" style="font-size:12.0px">+</text>
+</g>
+<g class="key key-hardware">
+<title>RGB_SAI</title>
+<rect x="947.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="992.0" y="348.0" style="font-size:16.5px">Main Sat</text>
+<text class="key-secondary" x="992.0" y="369.0" style="font-size:12.0px">+</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1043.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1088.0" y="348.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1088.0" y="369.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-system">
+<title>DEV_RESET</title>
+<rect x="1139.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1184.0" y="348.0" style="font-size:17.0px">Reset</text>
+<text class="key-secondary" x="1184.0" y="369.0" style="font-size:12.0px">hold</text>
+</g>
+<g class="key key-system">
+<title>SLEEP_MODE</title>
+<rect x="1235.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1280.0" y="357.8" style="font-size:17.0px">Sleep</text>
+</g>
+<g class="key key-system">
+<title>BAT_SHOW</title>
+<rect x="1331.0" y="307.0" width="138.0" height="90.0" rx="9" />
+<text class="key-primary" x="1400.0" y="357.8" style="font-size:17.0px">Battery</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1475.0" y="307.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1520.0" y="348.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1520.0" y="369.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-modifier">
+<title>KC_CAPS</title>
+<rect x="35.0" y="403.0" width="162.0" height="90.0" rx="9" />
+<text class="key-primary" x="116.0" y="453.8" style="font-size:17.0px">Caps Lock</text>
+</g>
+<g class="key key-hardware">
+<title>SIDE_HUI</title>
+<rect x="203.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="248.0" y="444.0" style="font-size:16.5px">Side Hue</text>
+<text class="key-secondary" x="248.0" y="465.0" style="font-size:12.0px">+</text>
+</g>
+<g class="key key-hardware">
+<title>SIDE_SPD</title>
+<rect x="299.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="344.0" y="444.0" style="font-size:13.2px">Side Speed</text>
+<text class="key-secondary" x="344.0" y="465.0" style="font-size:12.0px">−</text>
+</g>
+<g class="key key-hardware">
+<title>SIDE_VAD</title>
+<rect x="395.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="440.0" y="444.0" style="font-size:12.0px">Side Bright</text>
+<text class="key-secondary" x="440.0" y="465.0" style="font-size:12.0px">−</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="491.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="536.0" y="444.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="536.0" y="465.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-hardware">
+<title>RGB_RMOD</title>
+<rect x="587.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="632.0" y="444.0" style="font-size:17.0px">Main</text>
+<text class="key-secondary" x="632.0" y="465.0" style="font-size:12.0px">Mode −</text>
+</g>
+<g class="key key-hardware">
+<title>RGB_SPD</title>
+<rect x="683.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="728.0" y="444.0" style="font-size:13.2px">Main Speed</text>
+<text class="key-secondary" x="728.0" y="465.0" style="font-size:12.0px">−</text>
+</g>
+<g class="key key-hardware">
+<title>RGB_VAD</title>
+<rect x="779.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="824.0" y="444.0" style="font-size:12.0px">Main Bright</text>
+<text class="key-secondary" x="824.0" y="465.0" style="font-size:12.0px">−</text>
+</g>
+<g class="key key-hardware">
+<title>RGB_HUD</title>
+<rect x="875.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="920.0" y="444.0" style="font-size:16.5px">Main Hue</text>
+<text class="key-secondary" x="920.0" y="465.0" style="font-size:12.0px">−</text>
+</g>
+<g class="key key-hardware">
+<title>RGB_SAD</title>
+<rect x="971.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1016.0" y="444.0" style="font-size:16.5px">Main Sat</text>
+<text class="key-secondary" x="1016.0" y="465.0" style="font-size:12.0px">−</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1067.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1112.0" y="444.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1112.0" y="465.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1163.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1208.0" y="444.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1208.0" y="465.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1259.0" y="403.0" width="210.0" height="90.0" rx="9" />
+<text class="key-primary" x="1364.0" y="444.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1364.0" y="465.0" style="font-size:12.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1475.0" y="403.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1520.0" y="444.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1520.0" y="465.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="35.0" y="499.0" width="210.0" height="90.0" rx="9" />
+<text class="key-primary" x="140.0" y="540.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="140.0" y="561.0" style="font-size:12.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="251.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="296.0" y="540.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="296.0" y="561.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="347.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="392.0" y="540.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="392.0" y="561.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="443.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="488.0" y="540.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="488.0" y="561.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="539.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="584.0" y="540.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="584.0" y="561.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="635.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="680.0" y="540.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="680.0" y="561.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="731.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="776.0" y="540.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="776.0" y="561.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="827.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="872.0" y="540.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="872.0" y="561.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="923.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="968.0" y="540.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="968.0" y="561.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1019.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1064.0" y="540.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1064.0" y="561.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1115.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1160.0" y="540.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1160.0" y="561.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1211.0" y="499.0" width="162.0" height="90.0" rx="9" />
+<text class="key-primary" x="1292.0" y="540.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1292.0" y="561.0" style="font-size:12.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1379.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1424.0" y="540.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1424.0" y="561.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1475.0" y="499.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1520.0" y="540.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1520.0" y="561.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="35.0" y="595.0" width="114.0" height="90.0" rx="9" />
+<text class="key-primary" x="92.0" y="636.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="92.0" y="657.0" style="font-size:12.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="155.0" y="595.0" width="114.0" height="90.0" rx="9" />
+<text class="key-primary" x="212.0" y="636.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="212.0" y="657.0" style="font-size:12.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="275.0" y="595.0" width="114.0" height="90.0" rx="9" />
+<text class="key-primary" x="332.0" y="636.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="332.0" y="657.0" style="font-size:12.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="395.0" y="595.0" width="594.0" height="90.0" rx="9" />
+<text class="key-primary" x="692.0" y="636.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="692.0" y="657.0" style="font-size:12.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="995.0" y="595.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1040.0" y="636.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1040.0" y="657.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1091.0" y="595.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1136.0" y="636.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1136.0" y="657.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-layer">
+<title>MO(L_COMMON)</title>
+<rect x="1187.0" y="595.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1232.0" y="636.0" style="font-size:17.0px">Common</text>
+<text class="key-secondary" x="1232.0" y="657.0" style="font-size:12.0px">hold</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1283.0" y="595.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1328.0" y="636.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1328.0" y="657.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1379.0" y="595.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1424.0" y="636.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1424.0" y="657.0" style="font-size:11.0px">pass through</text>
+</g>
+<g class="key key-inherited">
+<title>KC_TRNS</title>
+<rect x="1475.0" y="595.0" width="90.0" height="90.0" rx="9" />
+<text class="key-primary" x="1520.0" y="636.0" style="font-size:17.0px">▽</text>
+<text class="key-secondary" x="1520.0" y="657.0" style="font-size:11.0px">pass through</text>
+</g>
+  <g class="legend" aria-label="Key category legend">
+<rect class="legend-swatch key-inherited" x="235.0" y="721" width="20" height="20" rx="5" />
+<text x="263.0" y="736">Inherited</text>
+<rect class="legend-swatch key-modifier" x="371.0" y="721" width="20" height="20" rx="5" />
+<text x="399.0" y="736">Modifier / custom</text>
+<rect class="legend-swatch key-layer" x="547.0" y="721" width="20" height="20" rx="5" />
+<text x="575.0" y="736">Layer access</text>
+<rect class="legend-swatch key-shortcut" x="689.0" y="721" width="20" height="20" rx="5" />
+<text x="717.0" y="736">Shortcut / macro</text>
+<rect class="legend-swatch key-action" x="859.0" y="721" width="20" height="20" rx="5" />
+<text x="887.0" y="736">Media / mouse</text>
+<rect class="legend-swatch key-hardware" x="1013.0" y="721" width="20" height="20" rx="5" />
+<text x="1041.0" y="736">Connection / lighting</text>
+<rect class="legend-swatch key-system" x="1223.0" y="721" width="20" height="20" rx="5" />
+<text x="1251.0" y="736">Maintenance</text>
+</g>
+</svg>

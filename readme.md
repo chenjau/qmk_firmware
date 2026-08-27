@@ -1,36 +1,89 @@
-# Quantum Mechanical Keyboard Firmware
+# Yu's NuPhy Air75 V2 firmware
 
-[![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
-[![Discord](https://img.shields.io/discord/440868230475677696.svg)](https://discord.gg/qmk)
-[![Docs Status](https://img.shields.io/badge/docs-ready-orange.svg)](https://docs.qmk.fm)
-[![GitHub contributors](https://img.shields.io/github/contributors/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/pulse/monthly)
-[![GitHub forks](https://img.shields.io/github/forks/qmk/qmk_firmware.svg?style=social&label=Fork)](https://github.com/qmk/qmk_firmware/)
+This repository contains a personal QMK firmware and source-controlled keymap
+for the **NuPhy Air75 V2 ANSI**. The default branch is intended to build the
+`yu` keymap; it is not a general-purpose replacement for upstream QMK.
 
-This is a keyboard firmware based on the [tmk\_keyboard firmware](https://github.com/tmk/tmk_keyboard) with some useful features for Atmel AVR and ARM controllers, and more specifically, the [OLKB product line](https://olkb.com), the [ErgoDox EZ](https://ergodox-ez.com) keyboard, and the Clueboard product line.
+The firmware is based directly on
+[jincao1's `air75v2-sleep` branch](https://github.com/jincao1/qmk_firmware/tree/air75v2-sleep),
+starting from commit
+[`5818bd6`](https://github.com/jincao1/qmk_firmware/commit/5818bd6df659b3919f834f58fe4134aa11aca2b6).
+jincao1's work provides the Air75 V2 firmware base, wireless/RF handling, and
+sleep-related changes on which this keymap is built.
 
-## Documentation
+The [NuPhy QMK source](https://github.com/nuphy-src/qmk_firmware) and
+[upstream QMK](https://github.com/qmk/qmk_firmware) remain important references.
+See [QMK's official documentation](https://docs.qmk.fm/) for general setup,
+building, flashing, and development information.
 
-* [See the official documentation on docs.qmk.fm](https://docs.qmk.fm)
+## What this fork adds
 
-The docs are powered by [VitePress](https://vitepress.dev/). They are also viewable offline; see [Previewing the Documentation](https://docs.qmk.fm/#/contributing?id=previewing-the-documentation) for more details.
+- A compiled, source-controlled eight-layer keymap, so the intended layout is
+  restored by flashing without importing a VIA JSON file.
+- A Caps-position chord state machine: press and release for Escape, or hold it
+  while pressing another key for Command on macOS and Control on Windows.
+- A dedicated macOS Globe key that supports native Globe shortcuts.
+- A shared layer for wireless connections, lighting controls, maintenance, and
+  an on-keyboard help entry.
+- Diagrams generated directly from `keymap.c` and the keyboard's physical
+  geometry, keeping the documentation tied to the firmware source.
 
-You can request changes by making a fork and opening a [pull request](https://github.com/qmk/qmk_firmware/pulls).
+Implementation details and regeneration instructions are in the
+[`yu` keymap documentation](keyboards/nuphy/air75_v2/ansi/keymaps/yu/readme.md).
 
-## Supported Keyboards
+## Build
 
-* [Planck](/keyboards/planck/)
-* [Preonic](/keyboards/preonic/)
-* [ErgoDox EZ](/keyboards/ergodox_ez/)
-* [Clueboard](/keyboards/clueboard/)
-* [Cluepad](/keyboards/clueboard/17/)
-* [Atreus](/keyboards/atreus/)
+Clone with submodules, install the QMK CLI following the
+[included QMK setup guide](docs/newbs_getting_started.md), and run from the
+repository root:
 
-The project also includes community support for [lots of other keyboards](/keyboards/).
+```sh
+qmk compile -kb nuphy/air75_v2/ansi -km yu
+```
 
-## Maintainers
+The resulting firmware is `nuphy_air75_v2_ansi_yu.bin`.
 
-QMK is developed and maintained by Jack Humbert of OLKB with contributions from the community, and of course, [Hasu](https://github.com/tmk). The OLKB product firmwares are maintained by [Jack Humbert](https://github.com/jackhumbert), the Ergodox EZ by [ZSA Technology Labs](https://github.com/zsa), the Clueboard by [Zach White](https://github.com/skullydazed), and the Atreus by [Phil Hagelberg](https://github.com/technomancy).
+## Layers
 
-## Official Website
+- **0:** macOS base
+- **1:** macOS function layer
+- **2:** Windows base
+- **3:** Windows function layer
+- **4-5:** reserved
+- **6:** shared connection, lighting, and maintenance controls
+- **7:** reserved
 
-[qmk.fm](https://qmk.fm) is the official website of QMK, where you can find links to this page, the documentation, and the keyboards supported by QMK.
+Faded, dashed keys in the diagrams pass through to a lower layer. Reserved
+layers are intentionally omitted.
+
+### Layer 0: macOS
+
+![Layer 0 macOS layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-0-macos.svg)
+
+### Layer 1: macOS Fn
+
+![Layer 1 macOS Fn layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-1-macos-fn.svg)
+
+### Layer 2: Windows
+
+![Layer 2 Windows layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-2-windows.svg)
+
+### Layer 3: Windows Fn
+
+![Layer 3 Windows Fn layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-3-windows-fn.svg)
+
+### Layer 6: Common
+
+![Layer 6 common layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-6-common.svg)
+
+## Credits
+
+- [Jin Cao / jincao1](https://github.com/jincao1) for the Air75 V2 firmware
+  branch used as this repository's direct base.
+- [NuPhy](https://github.com/nuphy-src/qmk_firmware) for its published keyboard
+  firmware sources.
+- [QMK](https://github.com/qmk/qmk_firmware) and its contributors for the
+  firmware framework.
+
+This is an unofficial personal firmware project and is not affiliated with or
+supported by NuPhy, jincao1, or the QMK project.

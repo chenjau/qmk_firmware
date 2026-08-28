@@ -59,6 +59,7 @@ enum custom_layer_tap_action {
 };
 
 #define CAPS_HOLD_MODIFIER_MS  500
+#define CUSTOM_LAYER_CANCEL_MS 500
 #define ESC_PULSE_DOWN_MS      24
 #define ESC_PULSE_GAP_MS       8
 #define GLOBE_PULSE_DOWN_MS    24
@@ -77,6 +78,7 @@ static uint8_t                      queued_globe_taps       = 0;
 static uint8_t                      queued_win_input_taps   = 0;
 static uint8_t                      custom_layer_number     = 0;
 static uint16_t                     caps_hold_timer         = 0;
+static uint16_t                     custom_layer_timer      = 0;
 static uint16_t                     esc_pulse_timer         = 0;
 static uint16_t                     globe_pulse_timer       = 0;
 static uint16_t                     win_input_pulse_timer   = 0;
@@ -171,6 +173,12 @@ static bool process_caps_dual_role(uint16_t keycode, keyrecord_t *record) {
         caps_dual_role_state = CAPS_DUAL_ROLE_PENDING;
         caps_hold_timer      = timer_read();
     } else {
+        if (caps_dual_role_state == CAPS_DUAL_ROLE_PENDING && timer_elapsed(caps_hold_timer) >= CAPS_HOLD_MODIFIER_MS) {
+            // Make the boundary deterministic even when release is processed
+            // before this scan cycle's housekeeping task.
+            activate_caps_modifier();
+        }
+
         if (caps_dual_role_state == CAPS_DUAL_ROLE_PENDING) {
             queue_esc_tap();
         } else if (caps_dual_role_state == CAPS_DUAL_ROLE_MODIFIER) {
@@ -345,6 +353,14 @@ static bool is_custom_layer_position(keyrecord_t *record) {
     return record->event.key.row == custom_layer_key.row && record->event.key.col == custom_layer_key.col;
 }
 
+static void custom_layer_task(void) {
+    if (custom_layer_down && !custom_layer_used && timer_elapsed(custom_layer_timer) >= CUSTOM_LAYER_CANCEL_MS) {
+        // The layer was available from physical press. Crossing the threshold
+        // only suppresses the tap action, providing a deliberate soft exit.
+        custom_layer_used = true;
+    }
+}
+
 static bool process_custom_layer_key(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         if (!custom_layer_down) {
@@ -353,10 +369,11 @@ static bool process_custom_layer_key(uint16_t keycode, keyrecord_t *record) {
             custom_layer_key        = record->event.key;
             custom_layer_number     = keycode == MAC_CUSTOM_GLOBE ? L_MAC_CUSTOM : L_WIN_CUSTOM;
             custom_layer_tap_action = keycode == MAC_CUSTOM_GLOBE ? CUSTOM_LAYER_TAP_MAC_GLOBE : CUSTOM_LAYER_TAP_WIN_INPUT;
+            custom_layer_timer      = timer_read();
             layer_on(custom_layer_number);
         }
     } else if (custom_layer_down && is_custom_layer_position(record)) {
-        bool                         send_tap   = !custom_layer_used;
+        bool                         send_tap   = !custom_layer_used && timer_elapsed(custom_layer_timer) < CUSTOM_LAYER_CANCEL_MS;
         enum custom_layer_tap_action tap_action = custom_layer_tap_action;
 
         layer_off(custom_layer_number);
@@ -364,6 +381,7 @@ static bool process_custom_layer_key(uint16_t keycode, keyrecord_t *record) {
         custom_layer_used       = false;
         custom_layer_number     = 0;
         custom_layer_tap_action = CUSTOM_LAYER_TAP_NONE;
+        custom_layer_timer      = 0;
 
         if (send_tap) {
             if (tap_action == CUSTOM_LAYER_TAP_MAC_GLOBE) {
@@ -385,6 +403,7 @@ static void clear_custom_layer_key(void) {
     custom_layer_used       = false;
     custom_layer_number     = 0;
     custom_layer_tap_action = CUSTOM_LAYER_TAP_NONE;
+    custom_layer_timer      = 0;
 }
 
 static void clear_user_key_state(void) {
@@ -480,6 +499,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 void housekeeping_task_user(void) {
     caps_dual_role_task();
+    custom_layer_task();
     esc_pulse_task();
     globe_pulse_task();
     win_input_pulse_task();

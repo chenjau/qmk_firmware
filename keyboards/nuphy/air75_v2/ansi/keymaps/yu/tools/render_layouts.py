@@ -56,7 +56,7 @@ LAYERS = (
         0,
         "layer-0-macos",
         "Layer 0 · macOS",
-        "Default layer · Caps: tap Esc, chord or hold 500 ms for Command",
+        "Default · Caps: tap Esc, chord/hold 500 ms for Command · Input key: tap Globe, hold 500 ms cancels",
     ),
     LayerDoc(
         1,
@@ -69,7 +69,7 @@ LAYERS = (
         2,
         "layer-2-windows",
         "Layer 2 · Windows",
-        "Default layer · Caps: tap Esc, chord or hold 500 ms for Control",
+        "Default · Caps: tap Esc, chord/hold 500 ms for Control · Input key: tap Win-Space, hold 500 ms cancels",
     ),
     LayerDoc(
         3,
@@ -141,8 +141,8 @@ KEY_LABELS = {
     "CAPS_GUI_ESC": KeyLabel("Esc", "chord / hold ⌘", "modifier"),
     "CAPS_CTL_ESC": KeyLabel("Esc", "chord / hold Ctrl", "modifier"),
     "MAC_GLOBE": KeyLabel("Globe", "macOS", "modifier"),
-    "MAC_CUSTOM_GLOBE": KeyLabel("Globe", "hold Layer 1", "layer"),
-    "WIN_CUSTOM_INPUT": KeyLabel("Win + Space", "hold Layer 3", "layer"),
+    "MAC_CUSTOM_GLOBE": KeyLabel("Globe", "Layer 1 · long cancel", "layer"),
+    "WIN_CUSTOM_INPUT": KeyLabel("Win + Space", "Layer 3 · long cancel", "layer"),
     "LAYOUT_HELP": KeyLabel("Help", "Layer 6", "shortcut"),
     "LNK_BLE1": KeyLabel("Bluetooth 1", category="hardware"),
     "LNK_BLE2": KeyLabel("Bluetooth 2", category="hardware"),

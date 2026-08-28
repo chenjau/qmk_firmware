@@ -28,23 +28,23 @@ and 7 are reserved and are therefore omitted.
 
 ### Layer 0: macOS
 
-![Layer 0 macOS layout](docs/layouts/layer-0-macos.svg?rev=A6)
+![Layer 0 macOS layout](docs/layouts/layer-0-macos.svg?rev=A7)
 
 ### Layer 1: macOS custom
 
-![Layer 1 macOS custom layout](docs/layouts/layer-1-macos-custom.svg?rev=A6)
+![Layer 1 macOS custom layout](docs/layouts/layer-1-macos-custom.svg?rev=A7)
 
 ### Layer 2: Windows
 
-![Layer 2 Windows layout](docs/layouts/layer-2-windows.svg?rev=A6)
+![Layer 2 Windows layout](docs/layouts/layer-2-windows.svg?rev=A7)
 
 ### Layer 3: Windows custom
 
-![Layer 3 Windows custom layout](docs/layouts/layer-3-windows-custom.svg?rev=A6)
+![Layer 3 Windows custom layout](docs/layouts/layer-3-windows-custom.svg?rev=A7)
 
 ### Layer 6: Common
 
-![Layer 6 common layout](docs/layouts/layer-6-common.svg?rev=A6)
+![Layer 6 common layout](docs/layouts/layer-6-common.svg?rev=A7)
 
 Regenerate the diagrams from the repository root after changing the compiled
 layout:
@@ -82,14 +82,19 @@ The custom-layer key next to Space uses the same rule in both OS modes:
 
 - Pressing it activates Layer 1 on macOS or Layer 3 on Windows immediately,
   without a tapping term.
-- If another keyboard key is pressed while it is held, releasing it only turns
-  the custom layer off.
-- If it is released without another key press, it sends a non-blocking Globe
-  tap on macOS or Win-Space on Windows, regardless of how long it was held.
+- Releasing it alone before 500 ms sends a non-blocking Globe tap on macOS or
+  Win-Space on Windows.
+- Pressing another keyboard key commits it to layer use immediately. Releasing
+  it then only turns the custom layer off.
+- Holding it alone for 500 ms also commits it to layer use, suppressing the tap
+  action on release. This is the soft-exit path when the key was pressed by
+  mistake and no layer action is wanted.
 
 The right-side dedicated Globe key remains available for held macOS Globe
 shortcuts. Win-Space follows Windows' system input-language and keyboard-layout
 switching behavior; with only one layout installed it has no visible effect.
+The layer itself is active from physical press throughout all three paths; the
+500 ms threshold never delays a Layer 1 or Layer 3 key.
 
 ## Caps: Esc or modifier
 

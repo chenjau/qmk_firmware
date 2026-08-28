@@ -24,8 +24,9 @@ building, flashing, and development information.
   or Control, or deliberately hold for 500 ms to use that modifier with a
   pointing device.
 - A dual-role input key next to Space: tap for Globe on macOS or Win-Space on
-  Windows, and hold for the matching custom layer. A dedicated right-side
-  Globe key remains available for native macOS Globe shortcuts.
+  Windows, hold for the matching custom layer, or keep holding for 500 ms to
+  cancel the tap action. A dedicated right-side Globe key remains available
+  for native macOS Globe shortcuts.
 - A shared layer for wireless connections, lighting controls, maintenance, and
   an on-keyboard help entry.
 - Diagrams generated directly from `keymap.c` and the keyboard's physical
@@ -44,11 +45,12 @@ it becomes the real modifier until release, allowing Command-click or
 Control-click with an external mouse; after that transition, release does not
 send Escape.
 
-The custom-layer key next to Space activates its layer immediately. If another
-keyboard key is used while it is held, release only turns the layer off. If it
-is released alone, it sends Globe on macOS or Win-Space on Windows to switch
-the input source. This decision is based on whether the layer was used, not on
-how long the key was held.
+The custom-layer key next to Space activates its layer immediately. Releasing
+it alone before 500 ms sends Globe on macOS or Win-Space on Windows. Pressing
+another keyboard key commits it to layer use immediately, while holding it
+alone for 500 ms commits it to layer use without invoking anything. Either
+committed path suppresses the input-switch tap on release, so a deliberate long
+hold provides a soft exit after an accidental press.
 
 ## Build
 
@@ -77,23 +79,23 @@ layers are intentionally omitted.
 
 ### Layer 0: macOS
 
-![Layer 0 macOS layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-0-macos.svg?rev=A6)
+![Layer 0 macOS layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-0-macos.svg?rev=A7)
 
 ### Layer 1: macOS custom
 
-![Layer 1 macOS custom layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-1-macos-custom.svg?rev=A6)
+![Layer 1 macOS custom layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-1-macos-custom.svg?rev=A7)
 
 ### Layer 2: Windows
 
-![Layer 2 Windows layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-2-windows.svg?rev=A6)
+![Layer 2 Windows layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-2-windows.svg?rev=A7)
 
 ### Layer 3: Windows custom
 
-![Layer 3 Windows custom layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-3-windows-custom.svg?rev=A6)
+![Layer 3 Windows custom layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-3-windows-custom.svg?rev=A7)
 
 ### Layer 6: Common
 
-![Layer 6 common layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-6-common.svg?rev=A6)
+![Layer 6 common layout](keyboards/nuphy/air75_v2/ansi/keymaps/yu/docs/layouts/layer-6-common.svg?rev=A7)
 
 ## Credits
 
